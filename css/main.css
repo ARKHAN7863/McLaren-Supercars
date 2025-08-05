@@ -530,3 +530,56 @@ trailer {
     right: 20px;
   }
 }
+
+/* RESPONSIVE LAYOUT */
+
+/* Tablet Portrait */
+@media (min-width: 601px) and (max-width: 900px) {
+  header {
+    padding: 20px 5%;
+  }
+  .home {
+    flex-direction: column;
+    padding: 40px 5% 0;
+    align-items: center;
+  }
+  .home-content {
+    max-width: 100%;
+    text-align: center;
+  }
+  .home-img {
+    width: 80vw;
+    height: auto;
+    right: 0;
+    transform: rotate(45deg);
+  }
+}
+
+/* Laptop / Medium Screens */
+@media (min-width: 901px) and (max-width: 1200px) {
+  header {
+    padding: 25px 6%;
+  }
+  .home-content {
+    max-width: 500px;
+  }
+  .home-img {
+    width: 60vw;
+    height: auto;
+    right: -10%;
+  }
+}
+
+/* Very Large Screens */
+@media (min-width: 1201px) {
+  .home-img {
+    width: 450px;
+    right: -15%;
+  }
+}
+.home-img img,
+.bg-video,
+.trailer {
+  max-width: 100%;
+  height: auto;
+}
