@@ -530,6 +530,11 @@ trailer {
     padding-bottom: 200px;
     right: 20px;
   }
+
+  .banner .play,
+  .banner .pause {
+    padding-top: 175px;
+  }
 }
 
 /* RESPONSIVE LAYOUT */
