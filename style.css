@@ -312,7 +312,7 @@ body {
     font-size: 24px;
     margin-bottom: 10px;
     opacity: 0;
-    animation: slideRight 1s ease forwards; 
+    animation: slideRight 1s ease forwards;
     animation-delay: 0.2s;
   }
   .navbar {
@@ -323,10 +323,10 @@ body {
   }
   .navbar a:hover,
   .navbar a.active {
-  color: #000;
+    color: #000;
   }
   .navbar a {
-    margin: 10px ;
+    margin: 10px;
     margin-top: 1px;
     padding: 1px;
     font-size: 16px;
@@ -383,12 +383,12 @@ body {
     right: 0;
     transform: rotate(45deg);
     opacity: 0;
-    animation: zoomOut 1s ease forwards;  
+    animation: zoomOut 1s ease forwards;
     animation-delay: 1.2s;
   }
   .home-img .rhombus {
     border-width: 15px;
-    box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.2); 
+    box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.2);
     opacity: 0;
     animation: zoomOut 1s ease forwards;
     animation-delay: 1.5s;
@@ -408,8 +408,8 @@ body {
     z-index: -1;
     opacity: 0;
     animation: rhombus2 1s ease forwards;
-
   }
+}
 
 /* Tablet Portrait (600–900px) */
 @media (min-width: 601px) and (max-width: 900px) {
