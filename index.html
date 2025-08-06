@@ -4,65 +4,97 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>McLaren | Home</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
+    <title>Login & Registration Form | McLaren</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
   </head>
 
   <body>
-    <header class="header">
-      <a href="index.html" class="logo"
-        ><img src="images/logo.png" alt="logo"
-      /></a>
-
-      <nav class="navbar">
-        <a href="index.html" style="--i: 1" class="active">Home</a>
-        <a href="mclaren.html" style="--i: 2">Showroom</a>
-        <!-- <a href="#" style="--i: 3">Review</a> -->
-        <!-- <a href="#" style="--i: 4">Featured</a> -->
-        <!-- <a href="#" style="--i: 5">Contact</a> -->
-      </nav>
-
-      <div class="social-media">
-        <a
-          href="https://www.instagram.com/__a_r_khan__?utm_source=qr&igsh=YTJ4YjI0bjZxNzI0"
-          style="--i: 1"
-          ><i class="bx bxl-instagram-alt"></i
-        ></a>
-        <a
-          href="https://x.com/__a_r_khan__?t=jO5oLSx3W2k770fUBKhnqA&s=09"
-          style="--i: 2"
-          ><i class="bx bxl-twitter"></i
-        ></a>
-        <a href="https://www.facebook.com/share/19ed777Fs1/" style="--i: 3"
-          ><i class="bx bxl-facebook"></i
-        ></a>
-      </div>
-    </header>
-
-    <section class="home">
-      <div class="home-content">
-        <h1>Supercars Experience.</h1>
-        <h3>Redefined!</h3>
-        <p>
-          Experience the thrill of precision engineering and cutting-edge design
-          with McLaren Supercars. From racetrack heritage to futuristic
-          performance, every McLaren is a masterpiece of speed, style, and
-          innovation. Built for those who demand the extraordinary, our
-          supercars deliver an unmatched driving experience that pushes the
-          limits of technology and performance.
-        </p>
-        <a href="mclaren.html" class="btn">Explore Cars</a>
+    <div class="wrapper">
+      <div class="form-wrapper sign-in">
+        <form onsubmit="return verifyUser(event)">
+          <h2>Login</h2>
+          <p class="parag1">Username: FNB</p>
+          <p class="parag2">Password: 2025</p>
+          <div class="input-group">
+            <input type="text" id="usernameInput" required />
+            <label for="usernameInput">Username</label>
+          </div>
+          <div class="input-group">
+            <input type="password" id="passwordInput" required />
+            <label for="passwordInput">Password</label>
+          </div>
+          <div class="remember">
+            <label><input type="checkbox" /> Remember me</label>
+          </div>
+          <button onclick="verifyUser()" type="submit">Login</button>
+          <div class="signUp-link">
+            <p>
+              Don't have an account?
+              <a href="#" class="signUpBtn-link">Sign Up</a>
+            </p>
+            <p style="color: #fff" id="message"></p>
+          </div>
+        </form>
       </div>
 
-      <div class="home-img">
-        <div class="rhombus"><img src="home-car.png" alt="" /></div>
+      <div class="form-wrapper sign-up">
+        <form action="">
+          <h2>Sign Up</h2>
+          <div class="input-group">
+            <input type="text" required />
+            <label for="">Username</label>
+          </div>
+          <div class="input-group">
+            <input type="email" required />
+            <label for="">Email</label>
+          </div>
+          <div class="input-group">
+            <input type="password" required />
+            <label for="">Password</label>
+          </div>
+          <div class="remember">
+            <label
+              ><input type="checkbox" /> I agree to the terms &
+              conditions</label
+            >
+          </div>
+          <button type="submit">Sign Up</button>
+          <div class="signUp-link">
+            <p>
+              Already have an account?
+              <a href="#" class="signInBtn-link">Sign In</a>
+            </p>
+          </div>
+        </form>
       </div>
+    </div>
 
-      <div class="rhombus2"></div>
-    </section>
+    <script>
+      function verifyUser(event) {
+        event.preventDefault(); // Stop form from submitting
+
+        var username = document.getElementById("usernameInput").value;
+        var password = document.getElementById("passwordInput").value;
+
+        var systemUsername = "FNB";
+        var systemPassword = "2025";
+
+        if (username === systemUsername && password === systemPassword) {
+          document.getElementById("message").innerHTML =
+            "Correct. Logging you in...";
+          // Redirect after short delay (optional)
+          setTimeout(function () {
+            window.location.href = "home.html";
+          }, 1000);
+        } else {
+          document.getElementById("message").innerHTML =
+            "Username or Password incorrect";
+        }
+
+        return false; // Prevent default form submission
+      }
+    </script>
+
+    <script src="login.js"></script>
   </body>
 </html>
