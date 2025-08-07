@@ -302,7 +302,7 @@ body {
 /* RESPONSIVE LAYOUT */
 
 /* Mobile */
-@media (min-width: 100px) and (max-width: 1440px) {
+@media (min-width: 100px) and (max-width: 800px) {
   header {
     padding: 20px 5%;
     flex-direction: column;
